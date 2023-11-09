@@ -81,6 +81,14 @@ h1 {
     width: 160px;
 }
 
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    display: inline-block;
+    width: 29px;
+    height: 62px;
+    background: no-repeat 50%/100% 100%
+}
+
 .carousel-control-prev-icon.white {
     background-image: url("./images/images/arrow_white_left.png");
 }
@@ -209,6 +217,15 @@ h1 {
         transform: translate3d(-100%, 0, 0);
         visibility: visible;
     }
+    /* right or prev direction */
+    #latest .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    #popular .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
 }
 /* LG */
 @media (min-width: 991px) {
@@ -237,6 +254,16 @@ h1 {
         position: relative;
         transform: translate3d(-100%, 0, 0);
         visibility: visible;
+    }
+    /* right or prev direction //t - previous slide direction last item animation fix */
+    #latest .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+    #popular .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
 }
 /* #endregion */
 
